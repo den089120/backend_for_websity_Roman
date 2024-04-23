@@ -1,10 +1,19 @@
-import express, { Express, Request, Response , Application } from 'express';
-import dotenv from 'dotenv';
+import express, { Request, Response , Application } from 'express';
+import 'dotenv/config';
 import {db} from "./db";
 import {User, FirstSection} from "./models/models";
+import router from "./Routes";
+import cors from 'cors';
+import ErrorHandlingMiddleware from "./middleware/ErrorHandlingMiddleware";
 
 const app: Application = express();
 const port = process.env.PORT || 8000;
+
+app.use(cors())
+app.use(express.json())
+app.use('/api', router)
+
+app.use(ErrorHandlingMiddleware)
 
 
 app.get('/', (req: Request, res: Response) => {

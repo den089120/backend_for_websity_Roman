@@ -1,4 +1,3 @@
-// import {Optional} from "sequelize";
 
 export enum Role {
     USER = 'USER',
@@ -11,8 +10,6 @@ export interface UserAttributes {
     password: string;
     role: Role;
 }
-
-// type NoteCreationAttributes = Optional<UserAttributes>;
 
 export interface FirstSectionAttributes {
     id: number;
