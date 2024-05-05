@@ -10,5 +10,6 @@ export interface typeFirstSectionController {
     reg: (req: Request, res: Response, next:  NextFunction) => Promise<void | NextFunction | Response<any, Record<string, any>>>;
     all: (req: Request, res: Response, next:  NextFunction) => Promise<void | NextFunction | Response<any, Record<string, any>>>;
     one: (req: Request, res: Response, next:  NextFunction) => Promise<void | NextFunction | Response<any, Record<string, any>>>;
+    update: (req: Request, res: Response, next:  NextFunction) => Promise<void | NextFunction | Response<any, Record<string, any>>>;
     delete: (req: Request, res: Response, next:  NextFunction) => Promise<void | NextFunction | Response<any, Record<string, any>>>;
 }
